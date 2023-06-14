@@ -1,0 +1,136 @@
+
+body {
+	background-color: #fbfbfd;
+	font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 16px; /* define o tamanho da fonte */
+}
+
+header {
+    color: rgb(233, 6, 6);
+    text-align: center;
+    justify-content: left; 
+    font-family: "Sofia", sans-serif;
+}
+
+main {
+    align-items: center;
+    height: 200px;   
+    text-align: center;
+    justify-content: left; 
+    font-family: "Sofia", sans-serif;
+}
+
+#texto {
+    font-weight: bold;
+}
+
+form {
+    background-color: rgba(221, 221, 221, 0.514);
+    text-align: center;
+}
+
+#container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 10px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgb(170, 170, 168);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+
+.button button {
+    margin-top: 50px;
+}
+
+#body-home {
+    background-color: rgb(196, 196, 196);
+}
+
+#body-logado {
+    background-color: rgb(196, 196, 196);
+}
+
+#botaoLogin {
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+}
+
+input {
+    border-radius: 6px;
+    border-color: rgb(235, 9, 9);
+    border-top: 0cm;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+  }
+   #menu {
+    align-items: center;
+    position: absolute;
+    top: -310px;
+    right: 0px;
+    bottom: 10px;
+    left: 0px;
+    width: 400px;
+    height: 40px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgb(170, 170, 168);
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Sofia", sans-serif;
+    font-style: normal;
+   }
+
+   a {
+    color: black;
+    text-align: center;
+   }
+
+   #selecaoPersonalizada {
+        -webkit-appearance: none;
+        /* Remove estilo padrão do Chrome */
+        -moz-appearance: none;
+        /* Remove estilo padrão do FireFox */
+        appearance: none;
+        /* Remove estilo padrão do FireFox*/
+        background-color:  rgb(196, 196, 196);
+        /* Imagem de fundo (Seta) */
+        background-position: 218px center;
+        /*Posição da imagem do background*/
+        width: 60px;
+        /* Tamanho do select, maior que o tamanho da div "div-select" */
+        height: 30px;
+        /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+        border: 1px solid #ddd;
+        text-align: center;
+        border-radius: 10%;
+   }
+
+#optionPadrao {
+    background-color: rgb(196, 196, 196);
+   }
+#optionLivre {
+    background-color: rgb(42, 216, 7);
+}
+#optionOcupada {
+    background-color: rgb(240, 8, 8);
+}
