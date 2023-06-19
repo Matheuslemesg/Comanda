@@ -1,0 +1,151 @@
+<html>
+<head>
+	<title>UAI Bar</title>
+  <style>
+    #nMesa {
+      margin-left: 117px;
+    }
+    #descPedido {
+      text-align: center;
+    }
+    #temacoluna {
+      background-color: rgb(110, 110, 110);
+      border-color: rgb(110, 110, 110);
+    }
+    #cardapioMesa {
+      margin-left: 40px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body id="body-logado">	
+  <h4 id="nMesa">Mesa 2</h4>
+<table id="cardapioMesa">
+  <tr>
+    <th id="temacoluna">Cardápio:</th>
+    <th></th>
+    <th id="temacoluna">Preço:</th>
+  </tr>
+  <tr>
+    <th id="select-Frango">Frango</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Frango', 15.00)">+</button></th>
+    <th class="preco">15.00</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  <tr>
+    <th id="select-contraFile">Contra-Filé</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Contra-Filé', 22.90)">+</button></th>
+    <th class="preco">22.90</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  <tr>
+    <th id="select-tilapia">Tilápia</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Tilápia', 19.00)">+</button></th>
+    <th class="preco">19.00</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  <tr>
+    <th id="select-lombo">Lombo Suíno</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Lombo Suíno', 23.00)">+</button></th>
+    <th class="preco">23.00</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  <tr>
+    <th id="temacoluna">Bebidas:</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th id="select-coca">Coca-Cola</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Coca-Cola', 7.00)">+</button></th>
+    <th class="preco">7.00</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  <tr>
+    <th id="select-Agua">Água</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Água', 2.00)">+</button></th>
+    <th class="preco">2.00</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  <tr>
+    <th id="select-aguaGas">Água com Gás</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Água com Gás', 3.00)">+</button></th>
+    <th class="preco">3.00</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  <tr>
+    <th id="select-SucoLanranja">Suco de Laranja</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Suco de Laranja', 9.00)">+</button></th>
+    <th class="preco">9.00</th>
+    <!-- <th><span id="produtoAdicionado"></span></th> -->
+  </tr>
+  
+  <tr>
+    <th  id="temacoluna">Total:</th>
+    <th></th>
+    <th  id="totalPreco">0.00</th>
+  </tr>
+  <tr>
+    <th></th>
+  </tr>
+  <tr>
+    <th colspan="3"><button id="encerrarPedido" onclick="limparPedido()">Encerrar Pedido</button></th>
+  </tr>
+</table>
+<h4 id="temacoluna" style="text-align: center;">Pedido:</h4>
+<p  style="background-color: rgb(220, 221, 221);"><span id="produtoAdicionado"></span>
+</p>
+<script>
+  var pedidos = [];
+
+  function adicionarPedido(produto, preco) {
+    pedidos.push({ produto: produto, preco: preco });
+    atualizarProdutoAdicionado(produto);
+    calcularPrecoTotal();
+  }
+
+  function removerPedido(produto, preco) {
+    var index = pedidos.findIndex(function (pedido) {
+      return pedido.produto === produto && pedido.preco === preco;
+    });
+
+    if (index !== -1) {
+      pedidos.splice(index, 1);
+      calcularPrecoTotal();
+    }
+  }
+
+  // function atualizarProdutoAdicionado(produto) {
+  //   document.getElementById("produtoAdicionado").textContent = produto;
+  // }
+
+  function atualizarProdutoAdicionado() {
+  var produtos = pedidos.map(function (pedido) {
+    return pedido.produto;
+  });
+
+  document.getElementById("produtoAdicionado").innerHTML = produtos.join("<br>");
+}
+
+  function calcularPrecoTotal() {
+    var total = 0;
+
+    for (var i = 0; i < pedidos.length; i++) {
+      total += pedidos[i].preco;
+    }
+
+    document.getElementById("totalPreco").innerHTML = total.toFixed(2);
+  }
+
+  function limparPedido() {
+    pedidos = [];
+    document.getElementById("produtoAdicionado").textContent = "";
+    document.getElementById("totalPreco").innerHTML = "0.00";
+  }
+
+
+</script>
+
+  
+</body>
+</html>

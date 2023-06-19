@@ -5,7 +5,7 @@
 	<title>UAI Bar</title>
     <link rel="stylesheet" href="visual.css">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="comanda.js"></script>
 </head>
 <body id="body-logado">	
   <header id="cabecalho">
@@ -23,25 +23,90 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
-        <form id="container">  
-          <div id="mesa" class="bot-message">Comanda Digital<br></div><br>
-          <input type="text" id="cliente-input" placeholder="Nome do Cliente"><br><br>
-          <select id="selecaoPersonalizada" name="mesas">
-            <option id="optionPadrao" value="0">Mesas</option>
-            <option id="optionLivre" value="1">Mesa 1</option>
-            <option id="optionOcupada" value="2">Mesa 2</option>
-            <option id="optionOcupada" value="3">Mesa 3</option>
-            <option id="optionLivre" value="4">Mesa 4</option>
-            <option id="optionLivre" value="5">Mesa 5</option>
-            <option id="optionOcupada" value="6">Mesa 6</option>
-            <option id="optionLivre" value="7">Mesa 7</option>
-            <option id="optionOcupada" value="8">Mesa 8</option>
-            <option id="optionOcupada" value="9">Mesa 9</option>
-            <option id="optionLivre" value="10">Mesa 10</option>
-          </select>
-          
-          <button type="button" id="send-button">Iniciar Pedido</button>
-        </form>
+    <h3>Mesa 1</h3>
+    
+    <div id="Mesa1">
+
+    <table id="cardapioMesa1">
+      <tr>
+        <th id="temacoluna">Cardápio:</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="select-Frango">Frango</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, 'Frango'); calcularPrecoTotal()">+</button></th>
+        <th class="preco">10.00</th>
+      </tr>
+      <tr>
+        <th id="select-Tilapia">Tilápia</th>
+        <th>R$ 10.00</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, document.getElementById('select-Tilapia').innerHTML)">+</button></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="select-contra">Contra Filé</th>
+        <th>R$ 10.00</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, document.getElementById('select-contra').innerHTML)">+</button></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="select-Lombo">Lombo Suíno</th>
+        <th>R$ 10.00</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, document.getElementById('select-Lombo').innerHTML)">+</button></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="temacoluna">Bebidas:</th>
+      </tr>
+      <tr>
+        <th id="select-Coca">Coca-Cola</th>
+        <th>R$ 10.00</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, document.getElementById('select-Coca').innerHTML)">+</button></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="select-agua">Água</th>
+        <th>R$ 10.00</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, document.getElementById('select-agua').innerHTML)">+</button></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="select-aguaGas">Água com Gás</th>
+        <th>R$ 10.00</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, document.getElementById('select-aguaGas').innerHTML)">+</button></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th id="select-SucoLanranja">Suco de Laranja</th>
+        <th>R$ 10.00</th>
+        <th><button id="botaoMais" onclick="adicionarPedido(1, document.getElementById('select-SucoLanranja').innerHTML)">+</button></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>
+          <button onclick="finalizarPedido(1)">Finalizar Pedido</button>
+        </th>
+      </tr>
+      <tr>
+        <th>Total:</th>
+        <th></th>
+        <th id="totalPreco">R$ 0.00</th> <!-- Coluna para exibir o preço total -->
+      </tr>
+    </table>
+    <table id="PedidoMesa1">
+      <tr>
+        <th id="temacoluna">Pedido:</th>
+      </tr>
+      <tr>
+        <th id="comanda-mesa1"></th>
+      </tr>
+      <tr>
+      </tr>
+    </table>
+  </div>
+
+
       
 </body>
 </html>
