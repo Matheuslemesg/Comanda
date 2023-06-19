@@ -10,7 +10,7 @@ function verificarLogin() {
     // Verifica se o usuário e a senha são válidos
     if (login === "atendimento" && senha === "atendimento") {
       alert("Login realizado com sucesso. Ótimo trabalho!");
-      window.location.href = "logado.html";
+      window.location.href = "mesas.html";
     } else {
       alert("Usuário ou senha inválidos!");
     }

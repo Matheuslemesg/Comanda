@@ -1,4 +1,15 @@
-
+@media (max-width: 768px) {
+    /* Estilos para telas menores que 768px */
+  }
+  
+  @media (max-width: 992px) {
+    /* Estilos para telas menores que 992px */
+  }
+  
+  @media (max-width: 1200px) {
+    /* Estilos para telas menores que 1200px */
+  }
+  
 body {
 	background-color: #fbfbfd;
 	font-family: Arial, sans-serif;
