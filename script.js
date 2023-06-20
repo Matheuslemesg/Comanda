@@ -8,7 +8,7 @@ function verificarLogin() {
     var senha = document.getElementById("senha").value;
   
     // Verifica se o usuário e a senha são válidos
-    if (login === "atendimento" && senha === "atendimento") {
+    if (login === "admin" && senha === "admin") {
       alert("Login realizado com sucesso. Ótimo trabalho!");
       window.location.href = "mesas.html";
     } else {
