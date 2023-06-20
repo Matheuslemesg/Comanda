@@ -75,21 +75,6 @@
             border-bottom: 1px solid #ddd;
         }
         
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-        
-        .btn {
-            padding: 5px 10px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #45a049;
-        }
         @media (max-width: 768px) {
     /* Estilos para telas menores que 768px */
   }
@@ -101,92 +86,25 @@
   @media (max-width: 1200px) {
     /* Estilos para telas menores que 1200px */
   }
+
+  .my-button:hover {
+    background-color: red; /* Defina a cor desejada para o botão quando o mouse estiver sobre ele */
+}
   
       </style>
       <script>
+        function alternarExibicaoIframe(id) {
+        var iframe = document.getElementById(id);
+        
+        if (iframe.style.display === 'none') {
+            iframe.style.display = 'block'; // Exibe o iframe
+        } else {
+            iframe.style.display = 'none'; // Oculta o iframe
+        }
+        }
 
+      
 
-        function alternarExibicaoIframe() {
-            var iframe = document.getElementById('meuIframe1');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe2() {
-            var iframe = document.getElementById('meuIframe2');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe3() {
-            var iframe = document.getElementById('meuIframe3');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe4() {
-            var iframe = document.getElementById('meuIframe4');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe5() {
-            var iframe = document.getElementById('meuIframe5');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe6() {
-            var iframe = document.getElementById('meuIframe6');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe7() {
-            var iframe = document.getElementById('meuIframe7');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe8() {
-            var iframe = document.getElementById('meuIframe8');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
-        function alternarExibicaoIframe9() {
-            var iframe = document.getElementById('meuIframe9');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block'; // Exibe o iframe
-            } else {
-                iframe.style.display = 'none'; // Oculta o iframe
-            }
-        }
 
       </script>
     </head>
@@ -199,35 +117,35 @@
             </tr>
             <tr>
                 <th>
-                        <button id="mesa1Button" onclick="alternarExibicaoIframe()">Mesa 1</button>
-                </th>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe1')">Mesa 1</button>
+                  </th>
+                  <th>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe2')">Mesa 2</button>
+                  </th>
                 <th>
-                        <button id="mesa1Button" onclick="alternarExibicaoIframe2()">Mesa 2</button>
-                </th>
-                <th>
-                        <button id="mesa1Button" onclick="alternarExibicaoIframe3()">Mesa 3</button>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <button id="mesa1Button" onclick="alternarExibicaoIframe4()">Mesa 4</button>
-                </th>
-                <th>
-                    <button id="mesa1Button" onclick="alternarExibicaoIframe5()">Mesa 5</button>
-                </th>
-                <th>
-                    <button id="mesa1Button" onclick="alternarExibicaoIframe6()">Mesa 6</button>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe3')">Mesa 3</button>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button id="mesa1Button" onclick="alternarExibicaoIframe7()">Mesa 7</button>
-                </th>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe4')">Mesa 4</button>
+                  </th>
+                  <th>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe5')">Mesa 5</button>
+                  </th>
                 <th>
-                    <button id="mesa1Button" onclick="alternarExibicaoIframe8()">Mesa 8</button>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe6')">Mesa 6</button>
                 </th>
+            </tr>
+            <tr>
                 <th>
-                    <button id="mesa1Button" onclick="alternarExibicaoIframe9()">Mesa 9</button>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe7')">Mesa 7</button>
+                  </th>
+                  <th>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe8')">Mesa 8</button>
+                  </th>
+                <th>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe9')">Mesa 9</button>
                 </th>
             </tr>
 

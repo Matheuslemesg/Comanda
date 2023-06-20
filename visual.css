@@ -10,6 +10,16 @@
     /* Estilos para telas menores que 1200px */
   }
   
+  #totalPreco {
+    background-color: rgb(110, 110, 110);
+    border-color: rgb(110, 110, 110);
+  }
+
+  #encerrarPedido {
+    background-color: rgb(241, 50, 50);
+    border-radius: 10px;
+  }
+
 body {
 	background-color: #fbfbfd;
 	font-family: Arial, sans-serif;
@@ -28,7 +38,6 @@ main {
     height: 200px;   
     text-align: center;
     justify-content: left; 
-    font-family: "Sofia", sans-serif;
 }
 
 #texto {
