@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html>
 <head>
-	<title>Comanda da Gigi</title>
+	<title>Comanda Eletrônica</title>
     <link rel="stylesheet" href="visual.css">
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +58,7 @@
             margin-left: 90px;
             align-items: center;
             height: 100vh;
-            margin-top: -630px;
+            margin-top: -580px;
         }
         #meuIframe1 {
           display: none; /* Inicia o iframe oculto */
@@ -114,20 +114,123 @@
   
       </style>
       <script>
-function alternarExibicaoIframe(id) {
+function alternarExibicaoIframe1(id) {
   var iframe = document.getElementById(id);
   var computedStyle = window.getComputedStyle(iframe);
-  var button = document.getElementById(id + 'Button');
+  var button = document.getElementById('mesa1Button');
 
   if (computedStyle.display === 'none') {
     iframe.style.display = 'block'; // Exibe o iframe
-    button.style.backgroundColor = 'red'; // Altera a cor do botão para vermelho
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
   } else {
     iframe.style.display = 'none'; // Oculta o iframe
-    button.style.backgroundColor = 'green'; // Altera a cor do botão para verde
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
   }
 }
+function alternarExibicaoIframe2(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa2Button');
 
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
+function alternarExibicaoIframe3(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa3Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
+function alternarExibicaoIframe4(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa4Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
+function alternarExibicaoIframe5(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa5Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
+function alternarExibicaoIframe6(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa6Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
+function alternarExibicaoIframe7(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa7Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
+function alternarExibicaoIframe8(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa8Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
+function alternarExibicaoIframe9(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById('mesa9Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.classList.add('visible'); // Adiciona a classe CSS 'visible'
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.classList.remove('visible'); // Remove a classe CSS 'visible'
+  }
+}
 
 
       
@@ -142,62 +245,62 @@ function alternarExibicaoIframe(id) {
             </tr>
             <tr>
                 <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe1')">Mesa 1</button>
+                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe1('meuIframe1')">Mesa 1</button>
                 </th>
               </tr>
               <tr>
                   <th>
-                    <button class="my-button" id="mesa2Button" onclick="alternarExibicaoIframe('meuIframe2')">Mesa 2</button>
+                    <button class="my-button" id="mesa2Button" onclick="alternarExibicaoIframe2('meuIframe2')">Mesa 2</button>
                   </th>
                 </tr>
                 <tr>
                 <th>
-                    <button class="my-button" id="mesa3Button" onclick="alternarExibicaoIframe('meuIframe3')">Mesa 3</button>
+                    <button class="my-button" id="mesa3Button" onclick="alternarExibicaoIframe3('meuIframe3')">Mesa 3</button>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button class="my-button" id="mesa4Button" onclick="alternarExibicaoIframe('meuIframe4')">Mesa 4</button>
+                    <button class="my-button" id="mesa4Button" onclick="alternarExibicaoIframe4('meuIframe4')">Mesa 4</button>
                   </th>
                 </tr>
                 <tr>
                   <th>
-                    <button class="my-button" id="mesa5Button" onclick="alternarExibicaoIframe('meuIframe5')">Mesa 5</button>
+                    <button class="my-button" id="mesa5Button" onclick="alternarExibicaoIframe5('meuIframe5')">Mesa 5</button>
                   </th>
                 </tr>
                 <tr>
                 <th>
-                    <button class="my-button" id="mesa6Button" onclick="alternarExibicaoIframe('meuIframe6')">Mesa 6</button>
+                    <button class="my-button" id="mesa6Button" onclick="alternarExibicaoIframe6('meuIframe6')">Mesa 6</button>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button class="my-button" id="mesa7Button" onclick="alternarExibicaoIframe('meuIframe7')">Mesa 7</button>
+                    <button class="my-button" id="mesa7Button" onclick="alternarExibicaoIframe7('meuIframe7')">Mesa 7</button>
                   </th>
                 </tr>
                 <tr>
                   <th>
-                    <button class="my-button" id="mesa8Button" onclick="alternarExibicaoIframe('meuIframe8')">Mesa 8</button>
+                    <button class="my-button" id="mesa8Button" onclick="alternarExibicaoIframe8('meuIframe8')">Mesa 8</button>
                   </th>
                 </tr>
                 <tr>
                 <th>
-                    <button class="my-button" id="mesa9Button" onclick="alternarExibicaoIframe('meuIframe9')">Mesa 9</button>
+                    <button class="my-button" id="mesa9Button" onclick="alternarExibicaoIframe9('meuIframe9')">Mesa 9</button>
                 </th>
             </tr>
 
         </table>
 
     <div class="iframe-container">
-      <iframe id="meuIframe1" src="mesa1.html" width="220" height="500"></iframe>
-      <iframe id="meuIframe2" src="mesa2.html" width="220" height="500"></iframe>
-      <iframe id="meuIframe3" src="mesa3.html" width="220" height="500"></iframe>
-      <iframe id="meuIframe4" src="mesa4.html" width="220" height="500"></iframe>    
-      <iframe id="meuIframe5" src="mesa5.html" width="220" height="500"></iframe>
-      <iframe id="meuIframe6" src="mesa6.html" width="220" height="500"></iframe>
-      <iframe id="meuIframe7" src="mesa7.html" width="220" height="500"></iframe>
-      <iframe id="meuIframe8" src="mesa8.html" width="220" height="500"></iframe>
-      <iframe id="meuIframe9" src="mesa9.html" width="220" height="500"></iframe>
+      <iframe id="meuIframe1" src="mesa1.html" width="220" height="600"></iframe>
+      <iframe id="meuIframe2" src="mesa2.html" width="220" height="600"></iframe>
+      <iframe id="meuIframe3" src="mesa3.html" width="220" height="600"></iframe>
+      <iframe id="meuIframe4" src="mesa4.html" width="220" height="600"></iframe>    
+      <iframe id="meuIframe5" src="mesa5.html" width="220" height="600"></iframe>
+      <iframe id="meuIframe6" src="mesa6.html" width="220" height="600"></iframe>
+      <iframe id="meuIframe7" src="mesa7.html" width="220" height="600"></iframe>
+      <iframe id="meuIframe8" src="mesa8.html" width="220" height="600"></iframe>
+      <iframe id="meuIframe9" src="mesa9.html" width="220" height="600"></iframe>
     </div>
 </body>
 

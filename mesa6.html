@@ -3,6 +3,11 @@
 	<title>UAI Bar</title>
   <link rel="stylesheet" href="visual.css">
   <style>
+    #lixeira {
+      margin-left: 0px;
+      margin-bottom: 0px;
+
+    }
     #nMesa {
       margin-left: 80px;
     }
@@ -21,6 +26,8 @@
 </head>
 <body id="body-logado">	
   <h4 id="nMesa">Mesa 6</h4>
+  <button onclick="adicionarProduto()">Criar Produto</button>  <button id="lixeira" onclick="limparPedido()">Limpar Pedido</button>  
+
 <table id="cardapioMesa">
   <tr>
     <th id="temacoluna">Cardápio:</th>
@@ -90,13 +97,50 @@
     <th></th>
   </tr>
   <tr>
-    <th colspan="3"><button id="encerrarPedido" onclick="limparPedido()">Limpar Pedido</button></th>
+    <!-- <th colspan="3"><button id="encerrarPedido" onclick="limparPedido()">Limpar Pedido</button></th> -->
+
   </tr>
+  <tr>
+    <th>
+      
+    </th>
 </table>
+
+<!-- <a href="#" onclick="limparPedido()">
+  <img src="img/Lixeira-Lixo/Lixeira Lixo.png" alt="Limpar Pedido"></a> -->
 <h4 id="temacoluna" style="text-align: center;">Pedido:</h4>
 <p  style="background-color: rgb(220, 221, 221);"><span id="produtoAdicionado"></span>
 </p>
+
+
+
+
 <script>
+function adicionarProduto() {
+  var tabela = document.getElementById('cardapioMesa');
+
+  var nome = prompt('Digite o nome do produto:');
+  var preco = parseFloat(prompt('Digite o preço do produto:'));
+
+  if (nome && preco) {
+    var novaLinha = document.createElement('tr');
+    var nomeProduto = document.createElement('th');
+    var botaoPedido = document.createElement('th');
+    var precoProduto = document.createElement('th');
+
+    nomeProduto.textContent = nome;
+    botaoPedido.innerHTML = '<button id="botaoMais" onclick="adicionarPedido(\'' + nome + '\', ' + preco + ')">+</button>';
+    precoProduto.textContent = preco.toFixed(2);
+
+    novaLinha.appendChild(nomeProduto);
+    novaLinha.appendChild(botaoPedido);
+    novaLinha.appendChild(precoProduto);
+
+    tabela.appendChild(novaLinha);
+  }
+}
+
+
   var pedidos = [];
 
   function adicionarPedido(produto, preco) {
@@ -149,4 +193,7 @@
 
   
 </body>
+<footer>
+
+</footer>
 </html>
