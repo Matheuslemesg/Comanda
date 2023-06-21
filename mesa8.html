@@ -22,11 +22,17 @@
       margin-left: 0px;
       text-align: left;
     }
+    #botaoExcluir {
+      margin-left: 15px;
+    }
   </style>
 </head>
 <body id="body-logado">	
   <h4 id="nMesa">Mesa 8</h4>
   <button onclick="adicionarProduto()">Criar Produto</button>  <button id="lixeira" onclick="limparPedido()">Limpar Pedido</button>  
+  <p></p>
+  <button id="botaoExcluir" onclick="excluirProduto(1)">Excluir produtos criados</button>
+  <p></p>
 
 <table id="cardapioMesa">
   <tr>
@@ -42,8 +48,8 @@
   </tr>
   <tr>
     <th id="select-contraFile">Contra-Filé</th>
-    <th><button id="botaoMais" onclick="adicionarPedido('Contra-Filé', 22.90)">+</button></th>
-    <th class="preco">22.90</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Contra-Filé', 17.00)">+</button></th>
+    <th class="preco">17.00</th>
     <!-- <th><span id="produtoAdicionado"></span></th> -->
   </tr>
   <tr>
@@ -54,8 +60,8 @@
   </tr>
   <tr>
     <th id="select-lombo">Lombo Suíno</th>
-    <th><button id="botaoMais" onclick="adicionarPedido('Lombo Suíno', 23.00)">+</button></th>
-    <th class="preco">23.00</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Lombo Suíno', 15.00)">+</button></th>
+    <th class="preco">15.00</th>
     <!-- <th><span id="produtoAdicionado"></span></th> -->
   </tr>
   <tr>
@@ -65,14 +71,14 @@
   </tr>
   <tr>
     <th id="select-coca">Coca-Cola</th>
-    <th><button id="botaoMais" onclick="adicionarPedido('Coca-Cola', 7.00)">+</button></th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Coca-Cola 1L', 7.00)">+</button></th>
     <th class="preco">7.00</th>
     <!-- <th><span id="produtoAdicionado"></span></th> -->
   </tr>
   <tr>
     <th id="select-Agua">Água</th>
-    <th><button id="botaoMais" onclick="adicionarPedido('Água', 2.00)">+</button></th>
-    <th class="preco">2.00</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Água', 2.50)">+</button></th>
+    <th class="preco">2.50</th>
     <!-- <th><span id="produtoAdicionado"></span></th> -->
   </tr>
   <tr>
@@ -83,8 +89,8 @@
   </tr>
   <tr>
     <th id="select-SucoLanranja">Suco de Laranja</th>
-    <th><button id="botaoMais" onclick="adicionarPedido('Suco de Laranja', 9.00)">+</button></th>
-    <th class="preco">9.00</th>
+    <th><button id="botaoMais" onclick="adicionarPedido('Suco de Laranja', 5.00)">+</button></th>
+    <th class="preco">5.00</th>
     <!-- <th><span id="produtoAdicionado"></span></th> -->
   </tr>
   
@@ -139,6 +145,26 @@ function adicionarProduto() {
     tabela.appendChild(novaLinha);
   }
 }
+
+function excluirProduto() {
+  var tabela = document.getElementById('cardapioMesa');
+  var linhas = tabela.getElementsByTagName('tr');
+
+  // Percorre as linhas em ordem reversa e remove cada linha
+  for (var i = linhas.length - 1; i > 0; i--) {
+    tabela.removeChild(linhas[i]);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
   var pedidos = [];
