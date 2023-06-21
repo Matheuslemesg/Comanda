@@ -18,11 +18,33 @@
         <h5 id="linkHome"><a></a><br><a id="linkA" href="index.html">Página Inicial</a></h5>
 
       <style>
+      .my-button {
+            background-color: green; /* Altere aqui a cor verde desejada */
+            border-radius: 10%;
+            width: 55px;
+            height: 40px;
+            cursor: pointer;
+          }
+          .my-button.active {
+  background-color: red; /* Cor vermelha para o botão quando o iframe está aberto */
+}
+         
+
+.my-button.visible {
+  background-color: red; /* Altere aqui a cor vermelha quando o iframe estiver visível */
+}
+
+.my-button:hover {
+    background-color: red; /* Defina a cor desejada para o botão quando o mouse estiver sobre ele */
+}
+
+
+
         table {
             margin-left: 0px;
         }
         #mesa1Button {
-            background-color: green;
+            /* background-color: green; */
             border-radius: 10%;
             width: 55px;
             height: 40px;
@@ -88,21 +110,25 @@
     /* Estilos para telas menores que 1200px */
   }
 
-  .my-button:hover {
-    background-color: red; /* Defina a cor desejada para o botão quando o mouse estiver sobre ele */
-}
+ 
   
       </style>
       <script>
-        function alternarExibicaoIframe(id) {
-        var iframe = document.getElementById(id);
-        
-        if (iframe.style.display === 'none') {
-            iframe.style.display = 'block'; // Exibe o iframe
-        } else {
-            iframe.style.display = 'none'; // Oculta o iframe
-        }
-        }
+function alternarExibicaoIframe(id) {
+  var iframe = document.getElementById(id);
+  var computedStyle = window.getComputedStyle(iframe);
+  var button = document.getElementById(id + 'Button');
+
+  if (computedStyle.display === 'none') {
+    iframe.style.display = 'block'; // Exibe o iframe
+    button.style.backgroundColor = 'red'; // Altera a cor do botão para vermelho
+  } else {
+    iframe.style.display = 'none'; // Oculta o iframe
+    button.style.backgroundColor = 'green'; // Altera a cor do botão para verde
+  }
+}
+
+
 
       
 
@@ -121,42 +147,42 @@
               </tr>
               <tr>
                   <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe2')">Mesa 2</button>
+                    <button class="my-button" id="mesa2Button" onclick="alternarExibicaoIframe('meuIframe2')">Mesa 2</button>
                   </th>
                 </tr>
                 <tr>
                 <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe3')">Mesa 3</button>
+                    <button class="my-button" id="mesa3Button" onclick="alternarExibicaoIframe('meuIframe3')">Mesa 3</button>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe4')">Mesa 4</button>
+                    <button class="my-button" id="mesa4Button" onclick="alternarExibicaoIframe('meuIframe4')">Mesa 4</button>
                   </th>
                 </tr>
                 <tr>
                   <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe5')">Mesa 5</button>
+                    <button class="my-button" id="mesa5Button" onclick="alternarExibicaoIframe('meuIframe5')">Mesa 5</button>
                   </th>
                 </tr>
                 <tr>
                 <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe6')">Mesa 6</button>
+                    <button class="my-button" id="mesa6Button" onclick="alternarExibicaoIframe('meuIframe6')">Mesa 6</button>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe7')">Mesa 7</button>
+                    <button class="my-button" id="mesa7Button" onclick="alternarExibicaoIframe('meuIframe7')">Mesa 7</button>
                   </th>
                 </tr>
                 <tr>
                   <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe8')">Mesa 8</button>
+                    <button class="my-button" id="mesa8Button" onclick="alternarExibicaoIframe('meuIframe8')">Mesa 8</button>
                   </th>
                 </tr>
                 <tr>
                 <th>
-                    <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe('meuIframe9')">Mesa 9</button>
+                    <button class="my-button" id="mesa9Button" onclick="alternarExibicaoIframe('meuIframe9')">Mesa 9</button>
                 </th>
             </tr>
 
