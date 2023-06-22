@@ -87,12 +87,12 @@
         }
         table {
             border-collapse: collapse;
-            width: 0%;
+            /* width: 0%; */
         }
         
         th, td {
             text-align: left;
-            padding: 8px;
+            padding: 4px;
             border-bottom: 1px solid #ddd;
         }
         
@@ -230,7 +230,16 @@ function alternarExibicaoIframe9(id) {
   }
 }
 
+function verificarCheckbox(checkboxId, buttonId) {
+  var checkbox = document.getElementById(checkboxId);
+  var button = document.getElementById(buttonId);
 
+  if (checkbox.checked) {
+    button.style.backgroundColor = "red";
+  } else {
+    button.style.backgroundColor = ""; // Voltar à cor padrão do botão
+  }
+}
       
 
 
@@ -240,50 +249,79 @@ function alternarExibicaoIframe9(id) {
         <table>
             <tr>
                 <th>Mesas:      </th>
+                <th>      </th>
+                <th>      </th>
             </tr>
             <tr>
                 <th>
                     <button class="my-button" id="mesa1Button" onclick="alternarExibicaoIframe1('meuIframe1')">Mesa 1</button>
+                </th>
+                <th>
+                  <input type="checkbox" id="minhaCheckbox1" onclick="verificarCheckbox('minhaCheckbox1', 'mesa1Button')">
                 </th>
               </tr>
               <tr>
                   <th>
                     <button class="my-button" id="mesa2Button" onclick="alternarExibicaoIframe2('meuIframe2')">Mesa 2</button>
                   </th>
+                  <th>
+                    <input type="checkbox" id="minhaCheckbox2" onclick="verificarCheckbox('minhaCheckbox2', 'mesa2Button')">
+                  </th>
                 </tr>
                 <tr>
                 <th>
                     <button class="my-button" id="mesa3Button" onclick="alternarExibicaoIframe3('meuIframe3')">Mesa 3</button>
+                </th>
+                <th>
+                  <input type="checkbox" id="minhaCheckbox3" onclick="verificarCheckbox('minhaCheckbox3', 'mesa3Button')">
                 </th>
             </tr>
             <tr>
                 <th>
                     <button class="my-button" id="mesa4Button" onclick="alternarExibicaoIframe4('meuIframe4')">Mesa 4</button>
                   </th>
+                  <th>
+                    <input type="checkbox" id="minhaCheckbox4" onclick="verificarCheckbox('minhaCheckbox4', 'mesa4Button')">
+                  </th>
                 </tr>
                 <tr>
                   <th>
                     <button class="my-button" id="mesa5Button" onclick="alternarExibicaoIframe5('meuIframe5')">Mesa 5</button>
+                  </th>
+                  <th>
+                    <input type="checkbox" id="minhaCheckbox5" onclick="verificarCheckbox('minhaCheckbox5', 'mesa5Button')">
                   </th>
                 </tr>
                 <tr>
                 <th>
                     <button class="my-button" id="mesa6Button" onclick="alternarExibicaoIframe6('meuIframe6')">Mesa 6</button>
                 </th>
+                <th>
+                  <input type="checkbox" id="minhaCheckbox6" onclick="verificarCheckbox('minhaCheckbox6', 'mesa6Button')">
+                </th>
             </tr>
             <tr>
                 <th>
                     <button class="my-button" id="mesa7Button" onclick="alternarExibicaoIframe7('meuIframe7')">Mesa 7</button>
+                  </th>
+                  <th>
+                    <input type="checkbox" id="minhaCheckbox7" onclick="verificarCheckbox('minhaCheckbox7', 'mesa7Button')">
                   </th>
                 </tr>
                 <tr>
                   <th>
                     <button class="my-button" id="mesa8Button" onclick="alternarExibicaoIframe8('meuIframe8')">Mesa 8</button>
                   </th>
+                  <th>
+                    <input type="checkbox" id="minhaCheckbox8" onclick="verificarCheckbox('minhaCheckbox8', 'mesa8Button')">
+                  </th>
                 </tr>
                 <tr>
                 <th>
                     <button class="my-button" id="mesa9Button" onclick="alternarExibicaoIframe9('meuIframe9')">Mesa 9</button>
+                </th>
+                <th>
+                  <input type="checkbox" id="minhaCheckbox9" onclick="verificarCheckbox('minhaCheckbox9', 'mesa9Button')">
                 </th>
             </tr>
 
